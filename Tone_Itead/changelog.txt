@@ -1,0 +1,5 @@
+Tone ITEAD Library
+
+Version Modified By Date     Comments
+------- ----------- -------- --------
+0001	Stan Lee    13/04/24 Fixed:	compatible with Arduino IDE 1.0x; Make the buzzer sing when the pin is set to LOW.
