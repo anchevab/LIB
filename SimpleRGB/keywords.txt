@@ -1,0 +1,26 @@
+#######################################
+# Keywords for S4A Library
+# @author   J.Villalobos  Mar.2018
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SimpleRGB  KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin  KEYWORD2
+red KEYWORD2
+green KEYWORD2
+blue KEYWORD2
+clear  KEYWORD2
+diff KEYWORD2
+getRGBColor	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
