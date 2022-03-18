@@ -1,0 +1,37 @@
+2009-03-27 Josh Kropf <josh@slashdev.ca>
+
+	* Lcd.h, Lcd.cpp
+	  (print): added method overrides for printing numbers
+
+
+2008-09-17 Josh Kropf <josh@slashdev.ca>
+
+	* Lcd.h: use protected member to store 4bit flag instead of line function
+	* Lcd.cpp: use flag to check if 4bit mode is enabled
+	  (check_bf): fixed bug resulting in wrong pin selected for BF check
+	  (check_bf): do second enable pin pulse in 4bit mode
+
+
+2008-09-14 Josh Kropf <josh@slashdev.ca>
+
+	* Lcd.h (send): added register to parameter list
+	  (set_enable, pulse_enable): new functions
+	* Lcd.cpp (send): set register after busy flag check
+	  (send): move busy flag check to start of function
+	  (check_bf): various fixes, but still doesn't work
+	  (setup): added fixed delay in 4bit init instead of busy flag check
+
+
+2008-03-09 Josh Kropf <josh@slashdev.ca>
+
+	* Lcd.h (CTRLPINS): macro for generating controll pin mask
+	* Lcd.cpp (send_8bit): new method for sending commands in 8bit mode
+	(send): removed delay parameter, check BF instead
+	(check_bf): new method for checking busy flag
+	(enable): removed first write of LOW to E pin: E is normally LOW
+	(setup): cleaned up initialization to match hd44780 spec exactly
+
+2008-01-12 Josh Kropf <josh@slashdev.ca>
+
+	* first release version 0.1
+
