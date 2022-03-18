@@ -1,0 +1,5 @@
+SharpDist	KEYWORD1
+
+setSamples	KEYWORD2
+distanceCentimeter	KEYWORD2
+distanceInch	KEYWORD2
