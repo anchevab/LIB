@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h3>Arduino Monitor Library</h3>
+<p>This Arduino library (Monitor directory),  works together with java program &ldquo;ArduinoMonitor.jar&rdquo; running on computer and  it has to be located into Arduino Libraries directory.<br />
+  The purpose of   this cooperation is to realize a simple monitor for Arduino. A monitor  managed by  Arduino like a display and  keyword by a computer.<br />
+  ArduinoMonitor.jar open a window  with several fields to display values and  several button to manage Arduino inputs. </p>
+<p>Display  fields:</p>
+<ul>
+  <li>6 level  bars (with numeric value) . Address 0 to 5</li>
+  <li>12 leds  (red/black) . Address 2 to 13</li>
+  <li>signal  display (plot panel)  (up to 6 functions)  Address 0 to 5 </li>
+</ul>
+<p>Activators:</p>
+<ul>
+  <li>  12 buttons  for digital value (High/Low). Address 2 to 13 </li>
+  <li>  6   slides for PWM value (0 to 255). Address 3,5,6,9,10,11</li>
+</ul>
+<p>Commands  available:</p>
+<table width="860" border="1">
+  <tr>
+    <td>COMMAND</td>
+    <td>MEANING</td>
+    <td>PARAMETERS</td>
+  </tr>
+  <tr>
+    <td width="190"><strong>openM</strong>(baud-rate)            <br /></td>
+    <td width="344">open  communication</td>
+    <td width="304"> baud-rate=Arduino serial possible values</td>
+  </tr>
+  <tr>
+    <td><strong>closeM</strong>()                    </td>
+    <td>close  communication</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><strong>writeAna</strong>(value,destination)</td>
+    <td>displays a value to destination field (level  bars)</td>
+    <td> int value(0to1024), byte destination(0to5)</td>
+  </tr>
+  <tr>
+    <td><strong>writeDig</strong>(value,destination)</td>
+    <td>switch on/off (value 1/0) the destination  led</td>
+    <td>int value(0to1), byte destination(2to13)</td>
+  </tr>
+  <tr>
+    <td><strong>plotFun</strong>(value,destination)</td>
+    <td>plots function (identified by destination  number 0to5)</td>
+    <td>byte destination(0to5)</td>
+  </tr>
+  <tr>
+    <td><strong>plotReset</strong>(destination)</td>
+    <td>stop plot ; if destination=6 cancel all plots</td>
+    <td>byte destination(0to6)</td>
+  </tr>
+  <tr>
+    <td><strong>plotFunX</strong>(value)</td>
+    <td>plots function X-Y :  value X </td>
+    <td>int value(0to1024)</td>
+  </tr>
+  <tr>
+    <td><strong>plotFunY</strong>(value)</td>
+    <td> plots function X-Y :  value Y</td>
+    <td>int value(0to1024)</td>
+  </tr>
+  <tr>
+    <td><strong>readDig</strong>(source)</td>
+    <td>returns 0/1 from button</td>
+    <td>return byte(0to1), byte source(2to13)</td>
+  </tr>
+  <tr>
+    <td><strong>readPWM</strong>(source)</td>
+    <td> returns value 0 to 255 from  slide</td>
+    <td>return byte(0to255), byte source(3,5,6,9,10,11)</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>Use:</p>
+<p>Define  monitor : es. Monitor m=Monitor() (outside functions setup and loop)<br />
+  Open  monitor   : es. m.openM(9600) (in setup function)<br />
+  Use  monitor     :  es. m.writeAna(value,4)… etc</p>
+</body>
+</html>
