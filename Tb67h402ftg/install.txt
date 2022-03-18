@@ -1,0 +1,26 @@
+
+Installation
+--------------------------------------------------------------------------------
+
+To install this library, just place this entire folder as a subfolder in your
+Arduino/lib/targets/libraries folder.
+
+When installed, this library should look like:
+
+Arduino/lib/targets/libraries/Tb67H420ftg              (this library's folder)
+Arduino/lib/targets/libraries/Tb67H420ftg/Tb67H420ftg.h(the library header file)
+Arduino/lib/targets/libraries/Tb67H420ftg/keywords.txt (the syntax coloring file)
+Arduino/lib/targets/libraries/Tb67H420ftg/examples     (the examples in the "open" menu)
+Arduino/lib/targets/libraries/Tb67H420ftg/readme.txt   (this file)
+
+Building
+--------------------------------------------------------------------------------
+
+After this library is installed, you just have to start the Arduino application.
+You may see a few warning messages as it's built.
+
+To use this library in a sketch, go to the Sketch | Import Library menu and
+select Test.  This will add a corresponding line to the top of your sketch:
+#include <Tb67H420ftg.h>
+
+To stop using this library, delete that line from your sketch.
